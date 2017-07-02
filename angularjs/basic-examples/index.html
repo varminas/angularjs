@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+  <div ng-app="myFirstApp" ng-init="lastName='MyLastName';fruits=['orange','apple','banana']" ng-controller="myCtrl">
+    <p>Name <input type="text" ng-model="firstName"></p>
+    <p>First name (from input): <span ng-bind="firstName"></span></p>
+    <p>Last name (initialized): <span ng-bind="lastName"></span></p>
+    <p>Expression (5+4): {{5+4}}</p>
+    <p>First name (expression): {{firstName}}</p>
+    <p my-test-directive></p>
+
+    <ul>
+      <li ng-repeat="fr in fruits">
+        {{fr}}
+      </li>
+    </ul>
+
+    <big-text-directive></big-text-directive>
+
+    <h2 ng-click="changeAge()">{{age}}</h2>
+  </div>
+
+
+  <script src="myFirstApp.js"></script>
+  <script src="myCtrl.js"></script>
+
+</body>
+</html>
